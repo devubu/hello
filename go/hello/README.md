@@ -1,5 +1,30 @@
-## Compile the Go Program
+## Compile the Go Program (statically linked by default and will default to using the architecture of your current system's CPU)
     go build hello.go
 
 ## Run the Compiled Program
     ./hello
+
+## To verify the binary is statically linked
+    ldd ./hello
+    readelf -d ./hello
+    
+## To check if the executable is 32-bit or 64-bit, whether it is statically linked, specific details about the binary format and architecture
+    file ./hello
+
+## Compile into a 32-bit executable
+    GOARCH=386 go build -o hello32 hello.go
+
+## Run the Compiled Program
+    ./hello32
+
+## To check if the executable is 32-bit, whether it is statically linked, specific details about the binary format and architecture
+    file ./hello32
+
+## Compile into a 64-bit executable
+    GOARCH=amd64 go build -o hello64 hello.go
+
+## Compile into a Windows 64-bit executable
+    GOOS=windows go build -o helloWin64.exe hello.go
+
+## Compile into a Windows 32-bit executable
+    GOOS=windows GOARCH=386 go build -o helloWin32.exe hello.go
