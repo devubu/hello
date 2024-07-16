@@ -28,3 +28,6 @@
 
 ## Compile into a Windows 32-bit executable
     GOOS=windows GOARCH=386 go build -o helloWin32.exe hello.go
+
+## Compile a 64 bit executable (make the binary more portable as it doesn't rely on external shared libraries, by disabling CGO (C Go) support in the the Go build process. CGO enables Go packages to call C code, but it requires dynamic linking to C libraries. Disabling CGO (CGO_ENABLED=0) ensures that the resulting binary is statically linked, meaning it includes all necessary libraries and dependencies within the executable itself.)
+    CGO_ENABLED=0 go build -o hello0 hello.go
