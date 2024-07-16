@@ -2,4 +2,4 @@
     wine cmd /c hello.bat
 
 ## Run the Batch Script on Windows
-    ./hello.bat
+    .\hello.bat
