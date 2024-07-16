@@ -46,11 +46,11 @@
 ## Compile into a standalone (portable) 32-bit Windows executable
     i686-w64-mingw32-gcc -o hello32.exe hello.c -static
 
-## Verify that the executable is 32-bit
+## Verify that the Windows executable is 32-bit
     file hello32.exe
 
 ## Compile into a standalone (portable) 64-bit Windows executable
     x86_64-w64-mingw32-gcc -o hello64.exe hello.c -static
 
-## Verify that the executable is 64-bit
+## Verify that the Windows executable is 64-bit
     file hello64.exe
