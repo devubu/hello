@@ -1,4 +1,4 @@
-## Install package
+## Install package (Provides 32-bit libraries and support for compiling and linking 32-bit C++ programs on a 64-bit system)
     sudo apt install -y g++-multilib
 
 ## Compile the C++ Program
