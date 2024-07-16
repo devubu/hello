@@ -1,2 +1,2 @@
 ## Run the Perl Script
-    bash hello.pl
+    perl hello.pl
