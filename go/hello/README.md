@@ -8,19 +8,19 @@
     ldd ./hello
     readelf -d ./hello
     
-## To check if the executable is 32-bit or 64-bit, whether it is statically linked, specific details about the binary format and architecture
+## To check if the binary is 32-bit or 64-bit, whether it is statically linked, specific details about the binary format and architecture
     file ./hello
 
-## Compile into a 32-bit executable
+## Compile into a 32-bit Linux binary
     GOARCH=386 go build -o hello32 hello.go
 
 ## Run the Compiled Program
     ./hello32
 
-## To check if the executable is 32-bit, whether it is statically linked, specific details about the binary format and architecture
+## To check if the binary is 32-bit, whether it is statically linked, specific details about the binary format and architecture
     file ./hello32
 
-## Compile into a 64-bit executable
+## Compile into a 64-bit Linux binary
     GOARCH=amd64 go build -o hello64 hello.go
 
 ## Compile into a Windows 64-bit executable
