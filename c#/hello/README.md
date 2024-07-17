@@ -8,4 +8,4 @@
     dotnet build -o bin
 
 ## Run the compiled C# program
-    dotnet run --project ../hello
+    dotnet run --project .
