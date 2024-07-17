@@ -1,6 +1,10 @@
+## Compile and Run the C# Program
+    dotnet build -o bin
+    dotnet run --project ~/Code/hello/c#/hello
+
 ## Create a C# project (C# Console Application)
-    dotnet new console -o hello
-    cd hello
+    dotnet new console -o example
+    cd example
 
 ## Replace the Default Code in Program.cs
     
@@ -8,7 +12,7 @@
     dotnet build -o bin
 
 ## Run the compiled C# program
-    dotnet run --project ~/Code/hello/c#/hello
+    dotnet run --project ../example
 
 ## Compile to a 64-bit Linux binary (Prepares the .NET application for deployment to Linux (specifically 64-bit) as a self-contained package. Self-Contained Deployment: Includes the .NET runtime and all dependencies within the published output, enabling the application to run on systems without requiring a separately installed .NET runtime. Optimizes the size of the published output by removing unused parts of the framework, reducing the application's footprint.)
     dotnet publish -c Release -r linux-x64 --self-contained true /p:PublishTrimmed=true
