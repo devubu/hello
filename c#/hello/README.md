@@ -7,6 +7,7 @@
     cd example
 
 ## Replace the Default Code in Program.cs
+    vim Program.cs
     
 ## Compile the C# program into the bin directory
     dotnet build -o bin
