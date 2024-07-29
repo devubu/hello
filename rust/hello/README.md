@@ -1,10 +1,10 @@
 ## Install package (A wrapper to use 'musl' as the C standard library for building applications)
     sudo apt install musl-tools
 
-## Install musl toolchain for 32-bit architecture
+## Install musl toolchain for 32-bit architecture Linux
     rustup target add i686-unknown-linux-musl
 
-## Install musl toolchain for 64-bit architecture
+## Install musl toolchain for 64-bit architecture Linux
     rustup target add x86_64-unknown-linux-musl
 
 ## To Compile a Single Rust Source File
