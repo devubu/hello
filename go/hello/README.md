@@ -23,6 +23,9 @@
 ## Compile into a 64-bit Linux binary
     GOARCH=amd64 go build -o hello64 hello.go
 
+## To check if the binary is 64-bit, whether it is statically linked, specific details about the binary format and architecture
+    file ./hello64
+
 ## Compile into a Windows 64-bit executable
     GOOS=windows go build -o helloWin64.exe hello.go
 
