@@ -31,7 +31,7 @@
 ## To Remove the 'target' Directory and it's Contents, Which Include the Compiled Release Binaries
     cargo clean
 
-# Set up the project configuration (or modify it if it already exists) to specify the linker for the 32-bit musl target
+## Set up the project configuration (or modify it if it already exists) to specify the linker for the 32-bit musl target
     mkdir -p .cargo
     vim .cargo/config
     [target.i686-unknown-linux-musl]
