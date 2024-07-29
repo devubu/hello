@@ -94,3 +94,16 @@
 
 ## Compile into a 64-bit Windows executable
     cargo build --target x86_64-pc-windows-gnu --release
+
+## To configure the project for cross-compilation (32-bit and 64-bit Windows executables)
+    mkdir -p .cargo
+    vim .cargo/config.toml
+    [target.i686-pc-windows-gnu]
+    linker = "i686-w64-mingw32-gcc"
+    
+    [target.x86_64-pc-windows-gnu]
+    linker = "x86_64-w64-mingw32-gcc"
+
+## Compile into both 32-bit and 64-bit Windows executables
+    cargo build --target i686-pc-windows-gnu --release
+    cargo build --target x86_64-pc-windows-gnu --release
