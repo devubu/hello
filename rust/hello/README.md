@@ -55,7 +55,7 @@
 ## To check if the binary is 64-bit, whether it is statically linked, specific details about the binary format and architecture
     file ./target/x86_64-unknown-linux-musl/release/hello
 
-## To configure the project for cross-compilation (32-bit and 64-bit)
+## To configure the project for cross-compilation (32-bit and 64-bit Linux binaries)
     mkdir -p .cargo
     vim .cargo/config.toml
     [target.x86_64-unknown-linux-musl]
