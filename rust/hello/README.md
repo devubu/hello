@@ -33,7 +33,7 @@
 
 ## Set up the project configuration (or modify it if it already exists) to specify the linker for the 32-bit musl target
     mkdir -p .cargo
-    vim .cargo/config
+    vim .cargo/config.toml
     [target.i686-unknown-linux-musl]
     linker = "musl-gcc"
 
@@ -45,7 +45,7 @@
 
 ## Set up the project configuration (or modify it if it already exists) to specify the linker for the 64-bit musl target
     mkdir -p .cargo
-    vim .cargo/config
+    vim .cargo/config.toml
     [target.x86_64-unknown-linux-musl]
     linker = "musl-gcc"
 
@@ -57,7 +57,7 @@
 
 ## To configure the project for cross-compilation (32-bit and 64-bit)
     mkdir -p .cargo
-    vim .cargo/config
+    vim .cargo/config.toml
     [target.x86_64-unknown-linux-musl]
     linker = "musl-gcc"
     
