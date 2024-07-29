@@ -67,3 +67,30 @@
 ## Compile into both 32-bit and 64-bit Linux binaries
     cargo build --target x86_64-unknown-linux-musl --release
     cargo build --target i686-unknown-linux-musl --release
+
+## Install package (Provides the neccessary tools to compile Rust code into 32-bit (x86) and 64-bit (x64) Windows Executables on a Debian-based Linux system)
+    sudo apt install -y mingw-w64
+
+## Add the Windows 32-bit target (Alternatively, you could use x86_64-pc-windows-msvc for the Microsoft Visual C++ toolchain, but that generally requires a Windows host or Wine)
+    rustup target add i686-pc-windows-gnu
+
+## Set up the project configuration (or modify it if it already exists) to specify the linker for the 32-bit Windows target
+    mkdir -p .cargo
+    vim .cargo/config.toml
+    [target.i686-pc-windows-gnu]
+    linker = "i686-w64-mingw32-gcc"
+
+## Compile into a 32-bit Windows executable
+    cargo build --target i686-pc-windows-gnu --release
+
+## Add the Windows 64-bit target
+    rustup target add x86_64-pc-windows-gnu
+
+## Set up the project configuration (or modify it if it already exists) to specify the linker for the 64-bit Windows target
+    mkdir -p .cargo
+    vim .cargo/config.toml
+    [target.x86_64-pc-windows-gnu]
+    linker = "x86_64-w64-mingw32-gcc"
+
+## Compile into a 64-bit Windows executable
+    cargo build --target x86_64-pc-windows-gnu --release
