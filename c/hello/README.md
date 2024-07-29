@@ -40,7 +40,7 @@
 ## Run the 64-bit static Linux binary
     ./hello64
 
-## Install package (Provides the neccessary tools to compile C and C++ code into 32-bit (x86) and 64-bit (x64) Windows Executables)
+## Install package (Provides the necessary tools to compile C and C++ code into 32-bit (x86) and 64-bit (x64) Windows Executables)
     sudo apt install -y mingw-w64
 
 ## Compile into a standalone (portable) 32-bit Windows executable
