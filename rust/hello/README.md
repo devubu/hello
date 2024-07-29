@@ -43,7 +43,7 @@
 ## To check if the binary is 32-bit, whether it is statically linked, specific details about the binary format and architecture
     file ./target/i686-unknown-linux-musl/release/hello
 
-# Set up the project configuration (or modify it if it already exists) to specify the linker for the 64-bit musl target
+## Set up the project configuration (or modify it if it already exists) to specify the linker for the 64-bit musl target
     mkdir -p .cargo
     vim .cargo/config
     [target.x86_64-unknown-linux-musl]
