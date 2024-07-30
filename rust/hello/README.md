@@ -7,7 +7,7 @@
 ## Install musl toolchain for 64-bit architecture Linux
     rustup target add x86_64-unknown-linux-musl
 
-## To Compile a Single Rust Source File
+## To Compile a Single Rust Source File (dynamically linked by default)
     rustc example.rs
 
 ## Run the Compiled Program
