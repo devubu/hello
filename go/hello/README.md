@@ -1,3 +1,6 @@
+## Install package (Provides 32-bit libraries and support for compiling and linking 32-bit Go programs on a 64-bit system)
+    sudo apt install -y gcc-multilib
+
 ## Compile the Go Program (statically linked by default and will default to using the architecture of your current system's CPU)
     go build hello.go
 
@@ -25,6 +28,9 @@
 
 ## To check if the binary is 64-bit, whether it is statically linked, specific details about the binary format and architecture
     file ./hello64
+
+## Install package (Provides the neccessary tools to compile Go code into 32-bit (x86) and 64-bit (x64) Windows Executables)
+    sudo apt install -y mingw-w64
 
 ## Compile into a Windows 64-bit executable
     GOOS=windows go build -o helloWin64.exe hello.go
