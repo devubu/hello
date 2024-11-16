@@ -26,12 +26,12 @@
 ## To uninstall a specific package (ensure you are in the virtual environment)
     pip3 uninstall -y <package_name>
 
+## To install a Python package from a specified Git repository URL using pipx
+    pipx install git+https://<repository-url>
+
 ## To install a Python package locally using pipx (you need to be in the directory where the 'pyproject.toml', 'setup.py', or 'setup.cfg' file is located)
     pipx install .
     pipx install <directory>
-
-## To install a Python package from a specified Git repository URL using pipx
-    pipx install git+https://<repository-url>
 
 ## To uninstall a Python package using pipx
     pipx uninstall <package_name>
