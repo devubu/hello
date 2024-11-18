@@ -26,6 +26,9 @@
 ## To uninstall a specific package (ensure you are in the virtual environment)
     pip3 uninstall -y <package_name>
 
+## To display a list of all installed Python packages and their versions using pipx
+    pipx list
+
 ## To install a Python package from a specified Git repository URL using pipx
     pipx install git+https://<repository-url>
 
