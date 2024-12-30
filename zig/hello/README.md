@@ -20,7 +20,7 @@
 ## To run a create executable and run immediately
     zig run hello.zig
 
-## To Initialize a `zig build` project in the current working directory
+## To initialize a `zig build` project in the current working directory
     zig init
 
 ## To build and run a Zig project in a single step
