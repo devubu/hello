@@ -1,4 +1,4 @@
-## Run the Python Script
+## Run the Python script
     python3 hello.py
 
 ## To create a virtual environment
