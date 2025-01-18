@@ -40,6 +40,16 @@
 ## Run the 64-bit static Linux binary
     ./hello64
 
+## To strip the Linux binary during compilation (Removes Debugging Symbols, Symbol Tables, and reduces binary size)
+    g++ hello.cpp -o hello -s 
+    g++ -m32 -static hello.cpp -o hello32 -s
+    g++ -m64 -static hello.cpp -o hello64 -s
+
+## To strip the Linux binary after compilation (Removes Debugging Symbols, Symbol Tables, and reduces binary size)
+    strip hello
+    strip hello32
+    strip hello64
+
 ## Install package (Provides the neccessary tools to compile C and C++ code into 32-bit (x86) and 64-bit (x64) Windows Executables)
     sudo apt install -y mingw-w64
 
@@ -47,10 +57,61 @@
     i686-w64-mingw32-g++ -o hello32.exe hello.cpp -static
 
 ## Verify that the Windows executable is 32-bit
-    file hello32.exe
+    file ./hello32.exe
 
 ## Compile into a standalone (portable) 64-bit Windows executable
     x86_64-w64-mingw32-g++ -o hello64.exe hello.cpp -static
 
 ## Verify that the Windows executable is 64-bit
-    file hello64.exe
+    file ./hello64.exe
+
+## To strip the Windows executable during compilation (Removes Debugging Symbols, Symbol Tables, and reduces executable size)
+    i686-w64-mingw32-g++ -o hello32.exe hello.cpp -static -s
+    x86_64-w64-mingw32-g++ -o hello64.exe hello.cpp -static -s
+
+## Install package (Advanced executable file compressor)
+    sudo apt install -y upx-ucl
+
+## To compress the Linux binary
+    upx ./hello
+    upx ./hello32
+    upx ./hello64
+
+## To verify the Linux binary is compressed with UPX
+    upx -t ./hello
+    upx -t ./hello32
+    upx -t ./hello64
+
+## View the file size and information
+    ls -l ./hello; file ./hello
+    ls -l ./hello32; file ./hello32 
+    ls -l ./hello64; file ./hello64
+
+## To decompress the Linux binary
+    upx -d ./hello
+    upx -d ./hello32
+    upx -d ./hello64
+
+## View the file size and information
+    ls -l ./hello; file ./hello
+    ls -l ./hello32; file ./hello32 
+    ls -l ./hello64; file ./hello64
+
+## Compile the C++ Program
+    clang++ hello.cpp -o hello
+
+## Compile into a standalone (portable) 32-bit Linux binary
+    clang++ -m32 -static hello.cpp -o hello32
+
+## Compile into a standalone (portable) 64-bit Linux binary
+    clang++ -m64 -static hello.cpp -o hello64
+
+## To strip the Linux binary (Removes Debugging Symbols, Symbol Tables, and reduces binary size)
+    clang++ hello.cpp -o hello -s 
+    clang++ -m32 -static hello.cpp -o hello32 -s
+    clang++ -m64 -static hello.cpp -o hello64 -s
+
+## To strip the Linux binary after compilation (Removes Debugging Symbols, Symbol Tables, and reduces binary size) 
+    strip hello
+    strip hello32
+    strip hello64
